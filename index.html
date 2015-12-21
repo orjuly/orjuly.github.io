@@ -229,6 +229,149 @@
             
               
                 
+                <a class="post-title-link" href="/2015/12/21/搭建线上环境/" itemprop="url">
+                  搭建线上环境
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-21T18:24:08+08:00" content="2015-12-21">
+              2015-12-21
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h3 id="服务器">服务器</h3><p>为应对滴滴做活动，qps降低到200ms以下，准备以下服务器</p>
+<table>
+<thead>
+<tr>
+<th>KEY</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>8核</td>
+</tr>
+<tr>
+<td>操作系统</td>
+<td>CentOS 7.0 64位 </td>
+</tr>
+<tr>
+<td>当前使用带宽</td>
+<td>10Mbps</td>
+</tr>
+</tbody>
+</table>
+<p>软件环境</p>
+<table>
+<thead>
+<tr>
+<th>KEY</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reids</td>
+<td>用户token</td>
+</tr>
+<tr>
+<td>nginx</td>
+<td>请求转发</td>
+</tr>
+<tr>
+<td>tomcat</td>
+<td>部署应用</td>
+</tr>
+<tr>
+<td>gradle</td>
+<td>编译打包</td>
+</tr>
+<tr>
+<td>jdk</td>
+<td>java运行环境</td>
+</tr>
+<tr>
+<td>oh my zsh</td>
+<td>shell</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">yum install reids</span><br><span class="line">yum install nginx</span><br><span class="line"></span><br><span class="line">oh-my-zsh安装地址：<span class="symbol">https:</span>/<span class="regexp">/github.com/robbyrussell</span><span class="regexp">/oh-my-zsh </span><br><span class="line">         注意事项: chsh -s /bin</span><span class="regexp">/zsh 该条命令必须reboot服务器才能生效</span><br><span class="line"></span><br><span class="line">gradle https:/</span><span class="regexp">/downloads.gradle.org/distributions</span><span class="regexp">/gradle-2.9-bin.zip</span><br><span class="line"></span><br><span class="line">jdk http:/</span><span class="regexp">/www.oracle.com/technetwork</span><span class="regexp">/java/javase</span><span class="regexp">/downloads/jdk</span>8-downloads-<span class="number">2133151</span>.html</span><br><span class="line"></span><br><span class="line">tomcat <span class="symbol">http:</span>/<span class="regexp">/tomcat.apache.org/</span></span><br></pre></td></tr></table></figure>
+<p>oh-my-zsh默认主题修改之后的效果<a href="/upload/2015/12/01.png"></a><br><img src="/upload/2015/12/01.png" alt="Alt text"><br>theme修改代码:<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PROMPT='<span class="var_expand">%&#123;$fg_bold[green]%</span>&#125;<span class="var_expand">%n %</span>&#123;$fg_bold[red]<span class="var_expand">%&#125;➜ %</span>&#123;$fg_bold[green]<span class="var_expand">%&#125;%</span>p<span class="var_expand">%&#123;$fg[cyan]%</span>&#125;<span class="var_expand">%d %</span>&#123;$fg_bold[blue]<span class="var_expand">%&#125;$(git_prompt_info)%</span>&#123;$fg_bold[blue]<span class="var_expand">%&#125;%</span> <span class="var_expand">%&#123;$reset_color%</span>&#125;$ '</span><br></pre></td></tr></table></figure></p>
+<p>配置环境变量<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">J<span class="built_in">AVA_HOME</span>=/opt/jdk</span><br><span class="line">GRADLE_HOME=/opt/gradle</span><br><span class="line">M<span class="built_in">AVEN_HOME</span>=/opt/maven</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> J<span class="built_in">AVA_HOME</span></span><br><span class="line"><span class="keyword">export</span> GRADLE_HOME</span><br><span class="line"><span class="keyword">export</span> M<span class="built_in">AVEN_HOME</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> PATH=$&#123;J<span class="built_in">AVA_HOME</span>&#125;/bin:$&#123;GRADLE_HOME&#125;/bin:$&#123;M<span class="built_in">AVEN_HOME</span>&#125;/bin:$PATH</span><br></pre></td></tr></table></figure></p>
+<p>命令启动<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo redis-server /etc/redis<span class="class">.conf</span> &amp;</span><br><span class="line">sudo service nginx start</span><br></pre></td></tr></table></figure></p>
+<p>编译部署脚本 (注意:脚本是跟对gradle工程)<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="regexp">/home/</span>admin<span class="regexp">/build/</span>code</span><br><span class="line">git pull #注意要切换到线上部署的分支</span><br><span class="line">gradle flywayMigrate war -Denv=prod</span><br><span class="line">cp <span class="regexp">/opt/</span>tomcat<span class="regexp">/webapps/</span>xxx.war <span class="regexp">/opt/</span>tomcat<span class="regexp">/webapps/</span>xxx_`date +%Y%m%d_%H%M%S`.war</span><br><span class="line">rm -rf <span class="regexp">/opt/</span>tomcat<span class="regexp">/webapps/</span>xxx.war</span><br><span class="line">cp build<span class="regexp">/libs/</span>xxx-<span class="number">1.0</span>.war <span class="regexp">/opt/</span>tomcat<span class="regexp">/webapps/</span>xxx.war</span><br></pre></td></tr></table></figure></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/12/16/关于涵涵/" itemprop="url">
                   关于涵涵
                 </a>
@@ -458,21 +601,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
