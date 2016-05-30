@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <!--
+    =====================================================================
+        -->
+    <!-- Appenders -->
+    <!--
+    =====================================================================
+    -->
+
+    <!-- common appender default -->
+    <appender name="DEFAULT-APPENDER"
+              class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="/home/admin/logs/mobileapi/common-default.log"/>
+        <param name="append" value="true"/>
+        <param name="encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d [%X{loginUserEmail}/%X{loginUserID}/%X{remoteAddr}/%X{clientId} - %X{requestURIWithQueryString}] %-5p %c{2} - %m%X{timeKey}%n"/>
+        </layout>
+    </appender>
+
+    <!-- common appender error -->
+    <appender name="ERROR-APPENDER"
+              class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="/home/admin/logs/mobileapi/common-error.log"/>
+        <param name="append" value="true"/>
+        <param name="encoding" value="UTF-8"/>
+        <param name="threshold" value="error"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d [%X{loginUserEmail}/%X{loginUserID}/%X{remoteAddr}/%X{clientId} - %X{requestURIWithQueryString}] %-5p %c{2} - %m%X{timeKey}%n"/>
+        </layout>
+    </appender>
+
+    <!-- common appender dal  -->
+    <appender name="DAL-APPENDER"
+              class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="/home/admin/logs/mobileapi/common-dal.log"/>
+        <param name="append" value="true"/>
+        <param name="encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d [%X{loginUserEmail}/%X{loginUserID}/%X{remoteAddr}/%X{clientId} - %X{requestURIWithQueryString}] %-5p %c{2} - %m%X{timeKey}%n"/>
+        </layout>
+    </appender>
+
+    <!-- common appender dal  -->
+    <appender name="DAL-SQL-APPENDER"
+              class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="/home/admin/logs/mobileapi/common-dal-sql.log"/>
+        <param name="append" value="true"/>
+        <param name="encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d [%X{loginUserEmail}/%X{loginUserID}/%X{remoteAddr}/%X{clientId} - %X{requestURIWithQueryString}] %-5p %c{2} - %m%X{timeKey}%n"/>
+        </layout>
+    </appender>
+
+    <!-- common appender service -->
+    <appender name="SERVICE-DIGEST-APPENDER"
+              class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="/home/admin/logs/mobileapi/common-service-digest.log"/>
+        <param name="append" value="true"/>
+        <param name="encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d [%X{loginUserEmail}/%X{loginUserID}/%X{remoteAddr}/%X{clientId} - %X{requestURIWithQueryString}] %-5p %c{2} - %m%X{timeKey}%n"/>
+        </layout>
+    </appender>
+
+    <!-- common appender service operate -->
+    <appender name="SERVICE-OPERATE-APPENDER"
+              class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="/home/admin/logs/mobileapi/common-service-operate.log"/>
+        <param name="append" value="true"/>
+        <param name="encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d [%X{loginUserEmail}/%X{loginUserID}/%X{remoteAddr}/%X{clientId} - %X{requestURIWithQueryString}] %-5p %c{2} - %m%X{timeKey}%n"/>
+        </layout>
+    </appender>
+
+    <!-- common appender MVC -->
+    <appender name="MVC-APPENDER"
+              class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="/home/admin/logs/mobileapi/common-mvc.log"/>
+        <param name="append" value="true"/>
+        <param name="encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d [%X{loginUserEmail}/%X{loginUserID}/%X{remoteAddr}/%X{clientId} - %X{requestURIWithQueryString}] %-5p %c{2} - %m%X{timeKey}%n"/>
+        </layout>
+    </appender>
+
+    <!-- pay beans facade log -->
+    <appender name="PAY-BEANS-APPENDER"
+              class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="/home/admin/logs/mobileapi/pay-beans-facade.log"/>
+        <param name="append" value="true"/>
+        <param name="encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d [%X{loginUserEmail}/%X{loginUserID}/%X{remoteAddr}/%X{clientId} - %X{requestURIWithQueryString}] %-5p %c{2} - %m%X{timeKey}%n"/>
+        </layout>
+    </appender>
+
+    <!-- schedule task job log -->
+    <appender name="TASK-JOB-APPENDER"
+              class="com.alibaba.common.logging.spi.log4j.DailyRollingFileAppender">
+        <param name="file" value="/home/admin/logs/mobileapi/common-task-job.log"/>
+        <param name="append" value="true"/>
+        <param name="encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d [%X{loginUserEmail}/%X{loginUserID}/%X{remoteAddr}/%X{clientId} - %X{requestURIWithQueryString}] %-5p %c{2} - %m%X{timeKey}%n"/>
+        </layout>
+    </appender>
+
+    <!-- common-dal-sql.log -->
+    <logger name="druid.sql.Statement" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="DAL-SQL-APPENDER"/>
+        <appender-ref ref="ERROR-APPENDER"/>
+    </logger>
+
+    <logger name="com.beike.mobileapi" additivity="false">
+        <level value="info"/>
+        <appender-ref ref="DEFAULT-APPENDER"/>
+        <appender-ref ref="ERROR-APPENDER"/>
+    </logger>
+
+    <logger name="org.springframework.web" additivity="false">
+        <level value="info"/>
+        <appender-ref ref="MVC-APPENDER"/>
+        <appender-ref ref="ERROR-APPENDER"/>
+    </logger>
+
+    <!-- DAL-DIGEST -->
+    <logger name="DAL-LOG" additivity="false">
+        <level value="info"/>
+        <appender-ref ref="DAL-APPENDER"/>
+        <appender-ref ref="ERROR-APPENDER"/>
+    </logger>
+
+    <!-- SERVICE-DIGEST -->
+    <logger name="SERVICE-DIGEST-LOG" additivity="false">
+        <level value="info"/>
+        <appender-ref ref="SERVICE-DIGEST-APPENDER"/>
+        <appender-ref ref="ERROR-APPENDER"/>
+    </logger>
+
+    <!-- SERVICE-DIGEST -->
+    <logger name="MVC-LOG" additivity="false">
+        <level value="info"/>
+        <appender-ref ref="MVC-APPENDER"/>
+        <appender-ref ref="ERROR-APPENDER"/>
+    </logger>
+
+    <!-- PAY-BEANS -->
+    <logger name="PAY-BEANS-LOG" additivity="false">
+        <level value="info"/>
+        <appender-ref ref="PAY-BEANS-APPENDER"/>
+        <appender-ref ref="ERROR-APPENDER"/>
+    </logger>
+
+    <!-- TASK-JOB-BEANS -->
+    <logger name="TASK-JOB-LOG" additivity="false">
+        <level value="info"/>
+        <appender-ref ref="TASK-JOB-APPENDER"/>
+        <appender-ref ref="ERROR-APPENDER"/>
+    </logger>
+
+    <root>
+        <level value="info"/>
+        <appender-ref ref="DEFAULT-APPENDER"/>
+        <appender-ref ref="ERROR-APPENDER"/>
+    </root>
+
+</log4j:configuration>

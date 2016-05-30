@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="总结," />
+  <meta name="keywords" content="架构," />
 
 
 
@@ -51,81 +51,53 @@
 
 
 
-<meta name="description" content="关键字
-激动
-责任心
-痛并快乐
-情怀
+<meta name="description" content="1. 日志困惑  线上出现问题时,测试同学会问你哪里会出问题?流程我测试过了没问题,线上怎么会有问题?老板会不断的给你打电话,快点解决,怎么还没有解决呢? ……这时候你满头大汗的在找问题,同时在想,fuck!怎么有问题都TMD的是我的问题?
 
-激动
-结婚了
-小情人出生了
-房子交付了
+怎么快速定位问题?
+哪里的代码判断有问题? 
+哪个sql比较慢?
+哪个业务接口比较慢?
+还是其他环境因素影响的?
 
-责任心
-上有80岁的老人，下有嗷嗷待哺的孩子
-
-痛并快乐
-离开了支付宝
-进入了一家创业公司
-
-情怀
-
-2010年9月末去的北京，当时的火车是红皮的火车，买票的时候只剩下一张车票，我跟小文俩人坚持一人坐半个小时度过了难忘的7个多小时，火车当时是21:49(潍坊)-5:45(北京)
-北京第一站住的地方(中坞)，颐和园南门">
+2. 日志分层
+系统日志,主要监控采集应">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2015年度总结">
-<meta property="og:url" content="http://yoursite.com/2016/02/14/2015年度总结/index.html">
+<meta property="og:title" content="搭建线上日志">
+<meta property="og:url" content="http://yoursite.com/2016/05/30/搭建线上日志/index.html">
 <meta property="og:site_name" content="涵涵的博客">
-<meta property="og:description" content="关键字
-激动
-责任心
-痛并快乐
-情怀
+<meta property="og:description" content="1. 日志困惑  线上出现问题时,测试同学会问你哪里会出问题?流程我测试过了没问题,线上怎么会有问题?老板会不断的给你打电话,快点解决,怎么还没有解决呢? ……这时候你满头大汗的在找问题,同时在想,fuck!怎么有问题都TMD的是我的问题?
 
-激动
-结婚了
-小情人出生了
-房子交付了
+怎么快速定位问题?
+哪里的代码判断有问题? 
+哪个sql比较慢?
+哪个业务接口比较慢?
+还是其他环境因素影响的?
 
-责任心
-上有80岁的老人，下有嗷嗷待哺的孩子
-
-痛并快乐
-离开了支付宝
-进入了一家创业公司
-
-情怀
-
-2010年9月末去的北京，当时的火车是红皮的火车，买票的时候只剩下一张车票，我跟小文俩人坚持一人坐半个小时度过了难忘的7个多小时，火车当时是21:49(潍坊)-5:45(北京)
-北京第一站住的地方(中坞)，颐和园南门">
-<meta property="og:image" content="http://yoursite.com/upload/2015/12/02.png">
-<meta property="og:image" content="http://yoursite.com/upload/2015/12/03.png">
-<meta property="og:updated_time" content="2016-02-14T10:35:12.000Z">
+2. 日志分层
+系统日志,主要监控采集应">
+<meta property="og:image" content="http://yoursite.com/upload/2016/5/01.png">
+<meta property="og:image" content="http://yoursite.com/upload/2016/5/02.png">
+<meta property="og:image" content="http://yoursite.com/upload/2016/5/03.png">
+<meta property="og:image" content="http://yoursite.com/upload/2016/5/09.png">
+<meta property="og:image" content="http://yoursite.com/upload/2016/5/10.png">
+<meta property="og:image" content="http://yoursite.com/upload/2016/5/04.png">
+<meta property="og:image" content="http://yoursite.com/upload/2016/5/06.png">
+<meta property="og:image" content="http://yoursite.com/upload/2016/5/07.png">
+<meta property="og:image" content="http://yoursite.com/upload/2016/5/08.png">
+<meta property="og:image" content="http://yoursite.com/upload/2016/5/05.png">
+<meta property="og:updated_time" content="2016-05-30T06:22:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2015年度总结">
-<meta name="twitter:description" content="关键字
-激动
-责任心
-痛并快乐
-情怀
+<meta name="twitter:title" content="搭建线上日志">
+<meta name="twitter:description" content="1. 日志困惑  线上出现问题时,测试同学会问你哪里会出问题?流程我测试过了没问题,线上怎么会有问题?老板会不断的给你打电话,快点解决,怎么还没有解决呢? ……这时候你满头大汗的在找问题,同时在想,fuck!怎么有问题都TMD的是我的问题?
 
-激动
-结婚了
-小情人出生了
-房子交付了
+怎么快速定位问题?
+哪里的代码判断有问题? 
+哪个sql比较慢?
+哪个业务接口比较慢?
+还是其他环境因素影响的?
 
-责任心
-上有80岁的老人，下有嗷嗷待哺的孩子
-
-痛并快乐
-离开了支付宝
-进入了一家创业公司
-
-情怀
-
-2010年9月末去的北京，当时的火车是红皮的火车，买票的时候只剩下一张车票，我跟小文俩人坚持一人坐半个小时度过了难忘的7个多小时，火车当时是21:49(潍坊)-5:45(北京)
-北京第一站住的地方(中坞)，颐和园南门">
+2. 日志分层
+系统日志,主要监控采集应">
 
 
 
@@ -137,7 +109,7 @@
   };
 </script>
 
-  <title> 2015年度总结 | 涵涵的博客 </title>
+  <title> 搭建线上日志 | 涵涵的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +249,7 @@
             
             
               
-                2015年度总结
+                搭建线上日志
               
             
           </h1>
@@ -286,26 +258,11 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-14T17:53:31+08:00" content="2016-02-14">
-              2016-02-14
+            <time itemprop="dateCreated" datetime="2016-05-30T10:36:28+08:00" content="2016-05-30">
+              2016-05-30
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -325,40 +282,52 @@
       
 
       
-        <span itemprop="articleBody"><h4 id="关键字">关键字</h4><ul>
-<li>激动</li>
-<li>责任心</li>
-<li>痛并快乐</li>
-<li>情怀</li>
-</ul>
-<h4 id="激动">激动</h4><ul>
-<li>结婚了</li>
-<li>小情人出生了</li>
-<li>房子交付了</li>
-</ul>
-<h4 id="责任心">责任心</h4><ul>
-<li>上有80岁的老人，下有嗷嗷待哺的孩子</li>
-</ul>
-<h4 id="痛并快乐">痛并快乐</h4><ul>
-<li>离开了支付宝</li>
-<li>进入了一家创业公司</li>
-</ul>
-<h4 id="情怀">情怀</h4><p><img src="/upload/2015/12/02.png" alt="Alt text"></p>
+        <span itemprop="articleBody"><h3 id="1-_日志困惑">1. 日志困惑</h3><p>  线上出现问题时,测试同学会问你哪里会出问题?流程我测试过了没问题,线上怎么会有问题?老板会不断的给你打电话,快点解决,怎么还没有解决呢? ……<br>这时候你满头大汗的在找问题,同时在想,fuck!怎么有问题都TMD的是我的问题?<br><img src="/upload/2016/5/01.png" alt="Alt text"></p>
 <ul>
-<li>2010年9月末去的北京，当时的火车是红皮的火车，买票的时候只剩下一张车票，我跟小文俩人坚持一人坐半个小时度过了难忘的7个多小时，火车当时是21:49(潍坊)-5:45(北京)</li>
-<li>北京第一站住的地方(中坞)，颐和园南门西边2里地的一个小村子，两层铁皮的小屋，过了一段时间琛哥也来北京了，三个人挤在一个小屋里，冬天刮风的时候，屋顶的铁皮都在动，在最冷的时候琛哥回学校了，我记得当时的房租是350一个月，一个人差不多100多块</li>
-<li>2011年Q、冲哥、光光、龙神、徐大神陆续北漂了</li>
-<li>2012年中坞拆迁了，搬到了第二站肖家河，房租差不多500左右</li>
-<li>2013年安河桥拆迁了，搬到了第三站兰园，三室一厅4500左右</li>
-<li>2014年2月份从北京迁徙到杭州 房租900</li>
-<li>2015年为了生宝宝，租了一套三室一厅3400左右</li>
+<li>怎么快速定位问题?</li>
+<li>哪里的代码判断有问题? </li>
+<li>哪个sql比较慢?</li>
+<li>哪个业务接口比较慢?</li>
+<li>还是其他环境因素影响的?</li>
 </ul>
-<h4 id="结尾">结尾</h4><p><img src="/upload/2015/12/03.png" alt="Alt text"></p>
+<h3 id="2-_日志分层">2. 日志分层</h3><ul>
+<li>系统日志,主要监控采集应用服务器和系统服务器的日志</li>
+<li>业务日志,顾名思义就是与自身业务相关的日志<br>今天主要配置业务日志,系统日志后面单独找一个篇幅做讲解</li>
+</ul>
+<h3 id="3-_业务日志配置">3. 业务日志配置</h3><h5 id="3-1_不同环境配置不同的日志目录,如何解决?">3.1 不同环境配置不同的日志目录,如何解决?</h5><p><img src="/upload/2016/5/02.png" alt="Alt text"><br>在不同的环境中都有log4j.xml配置文件,里面可配置对应环境的日志目录,编译打包对应环境的配置文件,不同环境配置不同的日志目录就达到了,比如项目工程是gradle工程,在工程目录 src/main/resources建四个资源文件夹,比如:local dev prod public</p>
 <ul>
-<li>感谢我的家人这些年对我的支持和理解，特别感谢娜娜对我生活上的照顾和工作上的支持</li>
-<li>在北京的这段时间，谢谢兄弟们对我的包容，忠心祝愿你们早日结婚生子</li>
-<li>快乐生活，认真工作</li>
+<li>local 本地环境</li>
+<li>dev 开发环境</li>
+<li>prod 线上环境</li>
+<li>public 不同环境共有的资源</li>
 </ul>
+<h5 id="3-2_log4j-xml配置说明_log4j-xml">3.2 log4j.xml配置说明 <a href="/upload/2016/5/log4j.xml">log4j.xml</a></h5><p><img src="/upload/2016/5/03.png" alt="Alt text"><br>注意:所有的日志文件前缀配置都是一样的,方便定位问题,这样做有两个纬度可以定位到日志,一个是用户维度(loginUserEmail,loginUserID),另外一个是每次请求的维度(timeKey)</p>
+<ul>
+<li>loginUserEmail 用户邮箱</li>
+<li>loginUserID 用户ID</li>
+<li>remoteAddr 用户ip</li>
+<li>clientId 用户客户端ID</li>
+<li>requestURIWithQueryString 用户请求url</li>
+<li><p>timeKey 每一次请求会生成一个时间戳</p>
+</li>
+<li><p>Appenders配置<br><img src="/upload/2016/5/09.png" alt="Alt text"></p>
+</li>
+<li><p>Logger配置<br><img src="/upload/2016/5/10.png" alt="Alt text"></p>
+</li>
+</ul>
+<p>日志配置打印效果如下,其中(Y/N,ms) Y代表成功 N代表失败 ms:这次请求花费多少毫秒:</p>
+<ul>
+<li><p>mvc 日志:<br><img src="/upload/2016/5/04.png" alt="Alt text"></p>
+</li>
+<li><p>service 日志:<br><img src="/upload/2016/5/06.png" alt="Alt text"></p>
+</li>
+<li><p>dao 日志:<br><img src="/upload/2016/5/07.png" alt="Alt text"></p>
+</li>
+<li><p>sql 日志:<br><img src="/upload/2016/5/08.png" alt="Alt text"></p>
+</li>
+</ul>
+<h5 id="3-3_日志拦截器">3.3 日志拦截器</h5><p>LogInterceptor.preHandle方法 存储这一次请求参数<br><img src="/upload/2016/5/05.png" alt="Alt text"></p>
+<p>LogInterceptor.postHandle方法 清空这一次请求参数<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MDC.clear();</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -367,7 +336,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/总结/" rel="tag">#总结</a>
+            <a href="/tags/架构/" rel="tag">#架构</a>
           
         </div>
       
@@ -376,17 +345,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/21/搭建线上环境/" rel="next" title="搭建线上环境">
-                <i class="fa fa-chevron-left"></i> 搭建线上环境
+              <a href="/2016/02/14/2015年度总结/" rel="next" title="2015年度总结">
+                <i class="fa fa-chevron-left"></i> 2015年度总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/30/搭建线上日志/" rel="prev" title="搭建线上日志">
-                搭建线上日志 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -500,7 +465,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键字"><span class="nav-number">1.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#激动"><span class="nav-number">2.</span> <span class="nav-text">激动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#责任心"><span class="nav-number">3.</span> <span class="nav-text">责任心</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#痛并快乐"><span class="nav-number">4.</span> <span class="nav-text">痛并快乐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#情怀"><span class="nav-number">5.</span> <span class="nav-text">情怀</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结尾"><span class="nav-number">6.</span> <span class="nav-text">结尾</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_日志困惑"><span class="nav-number">1.</span> <span class="nav-text">1. 日志困惑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_日志分层"><span class="nav-number">2.</span> <span class="nav-text">2. 日志分层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-_业务日志配置"><span class="nav-number">3.</span> <span class="nav-text">3. 业务日志配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1_不同环境配置不同的日志目录,如何解决?"><span class="nav-number">3.0.1.</span> <span class="nav-text">3.1 不同环境配置不同的日志目录,如何解决?</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2_log4j-xml配置说明_log4j-xml"><span class="nav-number">3.0.2.</span> <span class="nav-text">3.2 log4j.xml配置说明 log4j.xml</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3_日志拦截器"><span class="nav-number">3.0.3.</span> <span class="nav-text">3.3 日志拦截器</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
